@@ -7,7 +7,7 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li id="${pokemon.number}" class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -28,6 +28,15 @@ function loadPokemonItens(offset, limit) {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
     })
+
+    setTimeout(() => {
+        const pokemonItens = document.getElementsByClassName('pokemon')
+        for (let item of pokemonItens) {
+            item.addEventListener('click', () => {
+                window.location = window.location.href + 'details?id=' + item.id
+            })
+        }
+    }, 1000)
 }
 
 loadPokemonItens(offset, limit)

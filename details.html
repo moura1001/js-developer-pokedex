@@ -19,28 +19,23 @@
 
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/details.css">
 </head>
 
 <body>
-    <section class="content">
-        <h1>Pokédex</h1>
-
-        <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokemons here ..... -->
-        </ol>
-
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
+    <section id="content" class="content">
+        <div id="details">
+            <!-- ..... Pokémon details here ..... -->
+        </div>
+        <div id="info">
+            <!-- ..... Pokémon info here ..... -->
         </div>
     </section>
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/poke-details.js"></script>
 </body>
 
 </html>
